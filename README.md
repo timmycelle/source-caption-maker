@@ -9,7 +9,7 @@ source-caption-maker *(scm for short)* is a Python tool for creating and managin
 ## What Does It Do?
 1. Takes subtitle/caption data from a simple JSON format of a provided mod.
 2. Converts it into Source engine-compatible captions (`.txt` files).
-3. Optionally compiles the output `.txt` files into `.dat` files that the Source engine can use.
+3. Optionally compiles the output `.txt` files into `.dat` files that the Source engine can use (using `captioncompiler.exe` of desired Source game).
 > [!NOTE]
 > For detailed information about Source engine's caption system, visit the [Valve Developer Wiki](https://developer.valvesoftware.com/wiki/Closed_Captions).
 ## Getting Started
