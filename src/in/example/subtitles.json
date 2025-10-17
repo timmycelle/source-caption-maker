@@ -1,0 +1,177 @@
+{
+    "misc": {
+        "Act 1": { 
+            "example": {
+                "clr": "#969696",
+                "lines": {
+                    "2-iam": {
+                        "clr": "#ff0000",
+                        "italic": true
+                    },
+                    "3-iam2": {
+                        "clr": "#0000ff",
+                        "bold": true
+                    },
+                    "4-repeat": {
+                        "ndn": false,
+                        "norepeat": 15
+                    },
+                    "5-len": {
+                        "len": 5
+                    },
+                    "7-havefun": {
+                        "clr": "#ffd4d4",
+                        "bold": true
+                    }
+                }
+            }
+        },
+        "Act 2": {
+            "npc_floorturret": {
+                "clr": "#aaf0d1"
+            }
+        }
+    },
+    "english": {
+        "Act 1": { 
+            "example": {
+                "dn": "Examply",
+                "lines": {
+                    "1-hi": {
+                        "txt": "Hi! I'm just a dumb example."
+                    },
+                    "2-iam": {
+                        "txt": "I am red and italic."
+                    },
+                    "3-iam2": {
+                        "txt": "And I am blue and bold!"
+                    },
+                    "4-repeat": {
+                        "txt": "I am not repeating for 15 seconds and I have no display name."
+                    },
+                    "5-len": {
+                        "txt": "I'm staying on the screen for 5 seconds and I have a different display name.",
+                        "dn": "Examplifier"
+                    },
+                    "6-ihope": {
+                        "txt": "I hope this tool will prove useful!"
+                    },
+                    "7-havefun": {
+                        "txt": "Have fun!"
+                    }
+                }
+            }
+        },
+        "Act 2": {
+            "npc_floorturret": {
+                "dn": "Turret",
+                "lines": {
+                    "talkactive": {
+                        "txt": "Activated!"
+                    },
+                    "talkcollide": {
+                        "txt": "Coming through!"
+                    },
+                    "talkdisabled": {
+                        "txt": "Critical Error!"
+                    },
+                    "talkdeploy": {
+                        "txt": "Deploying!"
+                    },
+                    "talkshotat": {
+                        "txt": "Hey! It's me!"
+                    },
+                    "talktipped": {
+                        "txt": "Ouch!"
+                    },
+                    "talkdissolved": {
+                        "txt": "Ow ow ow!"
+                    },
+                    "talkpickup": {
+                        "txt": "Put me down!"
+                    },
+                    "talkautosearch": {
+                        "txt": "Search mode activated!"
+                    },
+                    "talksearch": {
+                        "txt": "Searching!"
+                    },
+                    "talkretire": {
+                        "txt": "Target lost!"
+                    }
+                }
+            }
+        }
+    },
+    "german": {
+        "Act 1": {
+            "example": {
+                "dn": "Beispiely",
+                "lines": {
+                    "1-hi": {
+                        "txt": "Hi! Ich bin nur ein dummes Beispiel."
+                    },
+                    "2-iam": {
+                        "txt": "Ich bin rot and kursiv."
+                    },
+                    "3-iam2": {
+                        "txt": "Und ich bin blau und fett!"
+                    },
+                    "4-repeat": {
+                        "txt": "Ich wiederhole nicht für 15 Sekunden und ich hab' kein Anzeigename."
+                    },
+                    "5-len": {
+                        "txt": "Ich bleibe auf dem Bildschirm für 5 Sekunden und habe ein anderer Anzeigename.",
+                        "dn": "Beispieler"
+                    },
+                    "6-ihope": {
+                        "txt": "Ich hoffe dieses Tool wird sich als nützlich beweisen!"
+                    },
+                    "7-havefun": {
+                        "txt": "Viel Spaß!"
+                    }
+                }
+            }
+        },
+        "Act 2": {
+            "npc_floorturret": {
+                "dn": "Turm",
+                "lines": {
+                    "talkactive": {
+                        "txt": "Aktiviert!"
+                    },
+                    "talkcollide": {
+                        "txt": "Platz da!"
+                    },
+                    "talkdisabled": {
+                        "txt": "Kritischer Fehler!"
+                    },
+                    "talkdeploy": {
+                        "txt": "Hochfahren!"
+                    },
+                    "talkshotat": {
+                        "txt": "He, ich bin's!"
+                    },
+                    "talktipped": {
+                        "txt": "Aua!"
+                    },
+                    "talkdissolved": {
+                        "txt": "Aua!"
+                    },
+                    "talkpickup": {
+                        "txt": "Ich will runter!"
+                    },
+                    "talkautosearch": {
+                        "txt": "Suchmodus aktiviert!"
+                    },
+                    "talksearch": {
+                        "txt": "Suche!"
+                    },
+                    "talkretire": {
+                        "txt": "Zielverlust!"
+                    }
+                }
+            }
+        }
+    }
+}

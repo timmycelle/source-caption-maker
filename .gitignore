@@ -1,0 +1,17 @@
+src/assets/preview/
+src/out/
+src/in/*/*
+!src/in/example/*
+src/gui.py
+src/*.txt
+
+*.ico
+
+# build & cache stuff
+__pycache__/
+release/
+build/
+dist/
+build.py
+*.spec
+*.exe
