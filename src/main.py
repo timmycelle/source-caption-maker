@@ -62,7 +62,7 @@ def fileWrite(filename: str, what: str):
         fdata.write(what)
         return True
 
-ver="1.0.0" # version
+ver="1.0.1" # version
 sep="-----------------------------------------" # seperator
 seplong=f"{sep}----------------------------"
 startmsg=f"timmycelle | source-caption-maker | {ver}" # script info
@@ -222,7 +222,7 @@ game		|gameinfo_path|.
                                     # set and handle the keys
                                     txt=str(value("txt")).replace("\"", r"\"").replace("\n", "<cr>")
                                     name=""
-                                    if not value("ndn"): # ndn
+                                    if not value("ndn")==False: # ndn
                                         name=f"<B>{value("dn")}<B>: " # dn
                                         if value("bold"):
                                             name=f"{name}<B>"
