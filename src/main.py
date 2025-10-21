@@ -1,3 +1,6 @@
+ver="1.0.2" # version
+url="https://www.github.com/timmycelle/source-caption-maker" # project repo url
+
 import argparse
 import os
 import json
@@ -8,7 +11,7 @@ import shutil
 from datetime import datetime, timezone
 # ^ all standard python libs
 
-parser=argparse.ArgumentParser()
+parser=argparse.ArgumentParser(description=f"A Python script which formats JSON data into text files (.txt) for compiling Source Engine subtitles / closecaptions (.dat)\nVersion {ver}\nSee {url} for more info.")
 
 # config
 parser.add_argument("--mod","-m",required=True,type=str,help="Mod Folder - Specifies which mod folder to process from the `in/` directory")
@@ -20,9 +23,10 @@ parser.add_argument("--captions","-c",action="store_true",help="Convert captions
 parser.add_argument("--clear","-cls",action="store_true",help="Clear console history before starting")
 parser.add_argument("--langs","-l",action="store_true",help="Print all supported languages")
 parser.add_argument("--verbose","-v",action="store_true",help="Print additional processing information")
-parser.add_argument("--delete-output","-do",action="store_true",help="Clear output folder writing output (Proceed with caution!)")
+parser.add_argument("--delete-output","-do",action="store_true",help="Clear output folder before writing output (Proceed with caution!)")
 parser.add_argument("--open-output","-oo",action="store_true",help="Open output folder when finished")
 parser.add_argument("--copy-output","-co",type=str,help="Copy output folder to specified location when finished")
+
 parser.add_argument("--tim","-t",action="store_true",help="Open Steam profile of project author (timmycelle)")
 
 args=parser.parse_args()
@@ -62,11 +66,9 @@ def fileWrite(filename: str, what: str):
         fdata.write(what)
         return True
 
-ver="1.0.1" # version
 sep="-----------------------------------------" # seperator
 seplong=f"{sep}----------------------------"
 startmsg=f"timmycelle | source-caption-maker | {ver}" # script info
-url="https://github.com/timmycelle/source-caption-maker" # project repo url
 
 # print start info
 print(sep)
@@ -165,7 +167,7 @@ game		|gameinfo_path|.
                 infoutc=f"UTC+{int(offset.total_seconds()/3600)}:00"
             else:
                 infoutc="UTC+0:00"
-            credits=f"\n\n// Auto-generated with source-caption-maker {ver} by timmycelle\n// {url}\n\n// Generated on {infodate} at {infotime} {infoutc}\n"
+            credits=f"\n\n// Auto-generated with source-caption-maker {ver} by timmycelle\n// More info: {url}\n\n// Generated on {infodate} at {infotime} {infoutc}\n"
             if creditsextra:
                 lines=creditsextra.split("\n")
                 creditsextra=""
@@ -222,11 +224,14 @@ game		|gameinfo_path|.
                                     # set and handle the keys
                                     txt=str(value("txt")).replace("\"", r"\"").replace("\n", "<cr>")
                                     name=""
-                                    if not value("ndn")==False: # ndn
+                                    ndn=value("ndn")
+                                    bold=value("bold")
+                                    italic=value("italic")
+                                    if not ndn: # ndn
                                         name=f"<B>{value("dn")}<B>: " # dn
-                                        if value("bold"):
+                                        if bold:
                                             name=f"{name}<B>"
-                                        if value("italic"):
+                                        if italic:
                                             name=f"{name}<I>"
                                     codes=""
                                     clr=value("clr")
@@ -242,9 +247,9 @@ game		|gameinfo_path|.
                                     if playerclr: # wip
                                         playerclr=playerclr.replace(" ", "")
                                         codes=f"{codes}<playerclr:{playerclr}>"
-                                    if value("bold") and value("ndn"): # bold & ndn
+                                    if bold and ndn: # bold
                                         codes=f"{codes}<B>"
-                                    if value("italic") and value("ndn"): # italic
+                                    if italic and ndn: # italic
                                         codes=f"{codes}<I>"
                                     if value("sfx"):
                                         codes=f"{codes}<sfx>"

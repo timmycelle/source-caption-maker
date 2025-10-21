@@ -13,7 +13,7 @@
                         "bold": true
                     },
                     "4-repeat": {
-                        "ndn": false,
+                        "ndn": true,
                         "norepeat": 15
                     },
                     "5-len": {
