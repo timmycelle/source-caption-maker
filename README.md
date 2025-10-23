@@ -71,28 +71,38 @@ The tool uses a structured JSON format for defining captions. Here are the avail
 
 You can use inline keys in the txt key if you want to make additional modifications to the caption that isn't normally possible in the JSON style.
 
+*(This only applies to misc keys)*
+
 For example, instead of writing:
 ```json
 {
     "txt": "Hello world",
     "clr": "#FF0000",
-    "bold": true
+    "italic": true
 }
 ```
 You could write:
 ```json
 {
-    "txt": "<clr:255,0,0><B>Hello world"
+    "txt": "<clr:255,0,0><I>Hello world"
 }
 ```
-*(This only applies to misc keys)*
+*(The "Hello World" text is italic and has the color red)*
+
+And also write:
+```json
+{
+    "txt": "<clr:0,0,255><B>Hello world<B> <clr:0,255,0><I>Test.<I>"
+}
+```
+*(The "Hello World" text is bold and has the color blue, "Test." is italic and has the color green.)*
 ## Planned features
 - Developer Commentary
 - GUI
 - Replace the use of `captioncompiler.exe` with [source-caption-compiler](https://github.com/p0358/source-caption-compiler) for wider compatibility and more convenience
 # FAQ
 ## What programming language did you use?
-Python.
+![](readme/pythonpowered.gif)
 ## Is this your first real project?
 Yes.
 ## What was this project originally?
