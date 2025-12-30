@@ -2,7 +2,8 @@ src/assets/preview/
 src/out/
 src/in/*/*
 !src/in/example/*
-src/gui.py
+src/scmgui.py
+src/scc.py
 src/*.txt
 
 *.ico
