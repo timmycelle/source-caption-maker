@@ -23,11 +23,11 @@ If you want to compile the output captions to `.dat` on Linux:
 ### Command Structure
 #### Windows
 ```
-python3 scm.py -mod <modname> [options]
+python3 scm.py --mod <modname> [options]
 ```
 #### Linux
 ```
-sh scm.sh -mod <modname> [options]
+sh scm.sh --mod <modname> [options]
 ```
 ### Command Options
 |Option|Type|Purpose|Required?|Description|
